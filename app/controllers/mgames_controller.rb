@@ -1,0 +1,2 @@
+class MgamesController < ApplicationController
+end

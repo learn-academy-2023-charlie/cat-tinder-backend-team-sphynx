@@ -1,0 +1,2 @@
+class Mgame < ApplicationRecord
+end
