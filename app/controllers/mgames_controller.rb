@@ -7,7 +7,11 @@ class MgamesController < ApplicationController
         def create
         # Create a new cat
             mgame = Mgame.create(mgame_params)
-            render json: mgame
+            if mgame.valid?
+              render json: mgame
+             else
+               render json: mgame.errors, status: 422
+            end
         end
       
         def update
