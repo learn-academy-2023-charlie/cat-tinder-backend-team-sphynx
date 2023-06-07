@@ -19,6 +19,7 @@ RSpec.describe "Mgames", type: :request do
     end
 
   end
+
   describe "POST /create" do
     it "creates a mgame" do
       # The params we are going to send with the request
@@ -44,5 +45,7 @@ RSpec.describe "Mgames", type: :request do
       expect(mgame.name).to eq 'Blue archive'
     end
   end
+
+  
 
 end
