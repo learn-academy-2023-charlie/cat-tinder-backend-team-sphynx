@@ -25,9 +25,13 @@ class MgamesController < ApplicationController
         end
       
         def destroy
+          mgames = Mgame.all
           mgame = Mgame.find(params[:id])
-          mgame.destroy
-          render json: mgame
+          if mgame.destroy
+            render json: mgame
+          else
+          render json: mgame.errors, status: 422
+          end
         end
 
         private
