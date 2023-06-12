@@ -1,4 +1,5 @@
 class MgamesController < ApplicationController
+
         def index
             mgames = Mgame.all
             render json: mgames
@@ -21,6 +22,7 @@ class MgamesController < ApplicationController
         end
 
         private
+
         def mgame_params
           params.require(:mgame).permit(:name, :game_type, :file_size, :summary, :img,)
         end
